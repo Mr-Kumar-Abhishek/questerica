@@ -52,7 +52,7 @@ Home.displayHomeScroll = function(){
 
 Home.displayLogo = function(){
     Home.logo = game.add.sprite(0, 20, 'atlas1', 'logo');
-    Home.logo.anchor.set(0.5,0);
+    Home.logo.anchor.set(0.25,0);
     Home.logo.x = game.width/2;
     Home.logo.hideTween = game.add.tween(Home.logo);
     Home.logo.hideTween.to({alpha: 0}, Phaser.Timer.SECOND*0.2);
