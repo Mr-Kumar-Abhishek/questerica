@@ -1,6 +1,6 @@
-# phaserquest
+# questerica
 
-Phaser Quest is a reproduction of Mozilla's [Browserquest](http://browserquest.mozilla.org/) using the following tools:
+Questerica is a simple browser based mmorpg using the following tools:
 - The [Phaser](https://phaser.io/) framework for the client 
 - [Socket.io](http://socket.io/) and [Node.js](https://nodejs.org/en/) for the server and client-server communication
 
@@ -48,16 +48,3 @@ The default por when using the Docker way is `80`, so you need to navigate to `<
 
 In `assets/maps/`, you can find `phaserquest_map.tmx`, which is the Tiled file of the map of the game, to be edited with the [Tiled Map Editor](http://www.mapeditor.org/). One you have made modifications in the Tiled file, you need to export it as a JSON file. But that file will contain a lot of layers, a legacy from how the original Browserquest map was designed. A lot of layers will translate to a very poor performance with Phaser, which is a shame since most of these layers contain only a few tiles. The solution is to "flatten" them to cram as many tiles as possible in the same layers. You can do so by running `formatMap()` from `js/server/format.js`. It will look for a `map.json` file in `assets/maps` and output two new files, the flattened map files for the client and the server.
 
-## Further documentation
-
-I have written and will keep writing articles about some development aspects of the game. The full list of existing articles is available [here](http://www.dynetisgames.com/tag/phaser-quest/).
-
-Here is the detail of the topics covered so far:
-- [Clients synchronization](http://www.dynetisgames.com/2017/03/19/client-updates-phaser-quest/)
-- [Latency estimation](http://www.dynetisgames.com/2017/03/19/latency-estimation-phaser-quest/)
-- [Interest management](http://www.dynetisgames.com/2017/04/05/interest-management-mog/) (the "AOI" stuff you might encounter in the code)
-- [Custom Binary Protocol](http://www.dynetisgames.com/2017/06/14/custom-binary-protocol-javascript/)
-
-## Donate
-
-If you want to support me to make more open-source projects like Phaser Quest, consider having a look at my [donation page](https://www.dynetisgames.com/donate/). In particular, take a minute to have a look at my [Patreon page](https://www.patreon.com/jeromerenaux), where you can find a listing of rewards for various levels of recurring contributions!
